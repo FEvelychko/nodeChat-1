@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use(cookieParser());
 
 app.get('/', function (req, res) {
-    res.render('index');
+  res.render('index');
 });
 
 http.createServer(app).listen(config.get('port'));
