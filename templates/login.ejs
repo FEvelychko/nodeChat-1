@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= blocks.title %></title>
+    <link rel='stylesheet' href='/css/app.css'/>
+    <link rel='stylesheet' href='/vendor/bower_components/bootstrap/dist/css/bootstrap.css'/>
+  </head>
+  <body data-gr-c-s-loaded="true">
+    <div class="container" style="padding-left: 30%;padding-right: 30%;">
+      <form id="form" class="form-signin" style="text-align: center" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" name="username" class="form-control" placeholder="Login">
+        <input type="password" name="password" class="form-control" placeholder="Password">
+        <button class="btn btn-lg btn-primary" style="margin-top:50px" type="submit">Sign in</button>
+      </form>
+    </div> <!-- /container -->
+<script src="/vendor/bower_components/jquery/dist/jquery.js"></script>
+<script src="/vendor/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript">
+  $(form).on('submit', function(e) {
+    e.preventDefault();
+    var form = $(this);
+    // debugger;
+
+    $.ajax({
+      url: "/login",
+      method: "POST",
+      data: form.serialize(),
+      statusCode: {
+        200: function() {
+          window.location.href = "/chat";
+        },
+        403: function() {
+          window.location.href = "/#";
+        }
+      }
+    })
+    console.log('form submitted');
+  });
+</script>
+</body>
+</html>
