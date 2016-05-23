@@ -1,5 +1,5 @@
 var User = require('../models/user').User;
-var async = require('async');
+//var async = require('async');
 
 module.exports = function(app) {
 

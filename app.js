@@ -20,6 +20,12 @@ app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(session({
+    secret: config.get('session:secret'),
+    key: config.get('session:key'),
+    cookie: config.get('session:cookie')
+}));
 require('./routes')(app);
 
 http.createServer(app).listen(config.get('port'));
