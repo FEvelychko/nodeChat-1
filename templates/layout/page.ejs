@@ -10,7 +10,7 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="/login">Увійти</a></li>
+            <li role="presentation"><a href="/login"><%= blocks.signinStatus %></a></li>
           </ul>
         </nav>
         <h3 class="text-muted">Node Chat</h3>
@@ -19,28 +19,8 @@
       <div class="jumbotron">
         <h1>Node Chat Application</h1>
       </div>
-
-      <footer class="footer">
-        <p>© 2016 - Max Velychko.</p>
-      </footer>
     </div>
 <script src="/vendor/bower_components/jquery/dist/jquery.js"></script>
 <script src="/vendor/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 </body>
-
-  <!--<body>
-    <header style="background: antiquewhite;">
-      <h4><%-blocks.header%></h4>
-    </header>
-    <section style="background: bisque;">
-      <h4><%-blocks.container%></h4>
-      <h4><%-body%></h4>
-    </section>
-    <footer style="background: beige;">
-      <h4><%-blocks.footer%></h4>
-    </footer>
-
-    <script src="/vendor/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/vendor/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  </body>-->
 </html>

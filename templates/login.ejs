@@ -20,7 +20,6 @@
   $(form).on('submit', function(e) {
     e.preventDefault();
     var form = $(this);
-    // debugger;
 
     $.ajax({
       url: "/login",
@@ -31,11 +30,10 @@
           window.location.href = "/chat";
         },
         403: function() {
-          window.location.href = "/#";
+//          window.location.href = "/#";
         }
       }
-    })
-    console.log('form submitted');
+    });
   });
 </script>
 </body>

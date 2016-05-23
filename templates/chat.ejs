@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= blocks.title %></title>
+  <link rel='stylesheet' href='/css/app.css'/>
+  <link rel='stylesheet' href='/vendor/bower_components/bootstrap/dist/css/bootstrap.css'/>
+</head>
+<body data-gr-c-s-loaded="true">
+<div class="container">
+  <div class="header clearfix">
+    <nav>
+      <ul class="nav nav-pills pull-right">
+        <li role="presentation"><a href="/">Вийти</a></li>
+      </ul>
+    </nav>
+    <h3 class="text-muted">Node Chat</h3>
+  </div>
+
+  <div class="jumbotron">
+    <h1>Node Chat Application</h1>
+  </div>
+
+  <div style="text-align: center;">
+    <p class="lead">
+      Welcome to Chat!
+    </p>
+
+    <form id="publish" class="form-inline">
+      <input type="text" style="width: 40%;" name="message"/>
+      <input type="submit" class="btn btn-primary" value="send"/>
+    </form>
+  </div>
+</div>
+<script src="/vendor/bower_components/jquery/dist/jquery.js"></script>
+<script src="/vendor/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
+

@@ -22,22 +22,4 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 require('./routes')(app);
 
-/*var MongoStore = require('connect-mongo')(session);
-app.use(session({
-  secret: config.get('session:secret'), // smth like ABCDE2424564564654645 - identificator
-  key: config.get('session:key'),
-  cookie: config.get('session:cookie'),
-  store: new MongoStore({mongooseConnection: mongoose.connection}),
-  // resave: true,
-  // saveUninitialized: true
-}));
-
-app.use(function(req, res, next) {
-  req.session.numberOfVisits = req.session.numberOfVisits + 1 || 1;
-  res.send("Visits" + req.session.numberOfVisits);
-})*/
-
-
-
-
 http.createServer(app).listen(config.get('port'));
